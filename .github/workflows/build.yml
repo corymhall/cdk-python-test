@@ -21,6 +21,8 @@ jobs:
         run: |-
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+      - name: Setup venv
+        run: python3 -m venv .venv
       - name: Install dependencies
         run: ./venv/bin/pip install -r requirements.txt
       - name: build
